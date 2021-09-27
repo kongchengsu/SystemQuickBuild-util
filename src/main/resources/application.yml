@@ -1,0 +1,4 @@
+#默认配置文件
+spring:
+  profiles:
+    active: @profiles.active@

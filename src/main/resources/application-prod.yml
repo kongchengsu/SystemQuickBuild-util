@@ -1,0 +1,89 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/linkage_system?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true
+    #    url: jdbc:mysql://192.168.1.132:3306/feng_xian_linkage_system?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true
+    username: linkage_system
+    #    username: root
+    password: XyNn3dGajPLTHHXM
+  #    password: sandong2012
+  redis:
+    database: 0
+    host: 127.0.0.1
+    #    host: 192.168.1.132
+    port: 6379
+    timeout: 10s
+#    password: 123456
+jedis:
+  #    链接池
+  pool:
+    #       最大连接数（负值表示没有限制）
+    max-active: 8
+    #       最大阻塞等待时间（负值表示没有限制）
+    max-wait: 1
+    #       最大空闲链接
+    max-idle: 8
+    #       最小空闲链接
+    min-idle: 0
+  ###FREEMARKER (FreeMarkerAutoConfiguration)
+#  freemarker:
+#    allow-request-override: false
+#    cache: true
+#    check-template-location: true
+#    charset: UTF-8
+#    content-type: text/html
+#    expose-request-attributes: true
+#    expose-session-attributes: false
+#    expose-spring-macro-helpers: false
+#    request-context-attribute: rc
+#    suffix: .html
+#    template-loader-path: classpath:/views/
+
+logging:
+  level: debug
+  level.jt-808.channel.handler.adapter: debug
+  #  level.com.qs.data.mysql.mapper: debug
+  level.com.jtexplorer.mapper: debug
+  level.com.jtexplorer.service: debug
+  level.com.jtexplorer.controller: debug
+  level.com.jtexplorer.socket: debug
+  config: classpath:/logConfig.xml
+
+mybatis:
+  #打印mybatis日志
+  configuration:
+    #org.apache.ibatis.logging.stdout.StdOutImpl 控制台打印sql语句方便调试sql语句执行错误
+    #org.apache.ibatis.logging.log4j2.Log4j2Impl:这个不在控制台打印查询结果,但是在log4j中打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+myConfig:
+  redis:
+    # redis中，登录人权限相关的有效时间
+    timeout: 1800
+  myLog:
+    projectName: xxx
+    projectId: x
+    #日志发送ip
+    sendLogIP: xxx
+    #系统信息发送ip
+    sendSystemMessageIP: xxx
+    #发送端线程池中线程数目
+    executorPollNumber: 16
+  userDefaultHeadImg:
+  studentDefaultHeadImg:
+  government:
+    apiUrl: xxx
+    corpid: xxx
+    agentId: xxx
+  sms:
+    #签名
+    signName: xxx
+    accessKeyId: xxx
+    accessKeySecret: xxx
+
+    #模板id
+    templateCode: xxx
+  file:
+    uploadUrl: /www/wwwroot/static/

@@ -1,0 +1,28 @@
+logging:
+  level: debug
+  level.jt-808.channel.handler.adapter: debug
+  #  level.com.qs.data.mysql.mapper: debug
+  level.com.jtexplorer.mapper: debug
+  level.com.jtexplorer.service: debug
+  level.com.jtexplorer.controller: debug
+  level.com.jtexplorer.socket: debug
+  config: classpath:./logConfig.xml
+
+myConfig:
+
+  sms:
+    #签名
+    signName: xxx
+    accessKeyId: xxx
+    accessKeySecret: xxx
+
+    #模板id
+    templateCode: xxx
+  file:
+    uploadUrl:
+
+  email:
+    host:
+    sender:
+    senderPassword:
+    title:
